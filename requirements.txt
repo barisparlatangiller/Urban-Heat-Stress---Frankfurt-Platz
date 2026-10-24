@@ -1,0 +1,9 @@
+solweig==0.1.0b96
+rasterio>=1.3
+geopandas>=0.14
+numpy
+pandas
+scipy
+pyproj
+pillow
+rasterstats

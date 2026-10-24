@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urban Heat Stress · Frankfurt Platz</title>
+<meta name="description" content="How hot does it feel on Frankfurt's public squares? A 1 m SOLWEIG simulation of the June 2026 heatwave, hour by hour.">
+<meta property="og:title" content="Urban Heat Stress · Frankfurt Platz">
+<meta property="og:description" content="Hour-by-hour heat stress on Frankfurt's squares during the June 2026 heatwave, at 1 m resolution.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="app">
+  <main class="mapwrap">
+    <div id="map" aria-label="Map"></div>
+
+    <div class="card legend-card" id="legend" aria-live="polite"></div>
+
+    <div class="card player" id="player">
+      <button id="play" class="play" aria-label="Play the day">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path id="playIcon" d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      </button>
+      <div class="player-main">
+        <div class="days" id="days" role="tablist" aria-label="Day"></div>
+        <div class="scrub">
+          <input type="range" id="hour" min="0" max="23" step="1" value="15" aria-label="Hour of day">
+          <div class="scrub-ticks mono"><span>01</span><span>07</span><span>13</span><span>19</span><span>00</span></div>
+        </div>
+      </div>
+      <div class="clock">
+        <output id="hourOut" class="mono">16:00</output>
+        <span id="sunState" class="sun-state"></span>
+      </div>
+    </div>
+
+    <div id="tip" class="tip" hidden></div>
+    <div id="loading" class="loading">Loading the heatwave…</div>
+  </main>
+
+  <aside class="panel card" id="panel">
+    <header class="head">
+      <p class="eyebrow">Research project · Frankfurt Altstadt</p>
+      <h1>How hot do our squares get?</h1>
+      <p class="lede">Felt temperature on 24 public squares, simulated for every hour of the <b>24–28 June 2026 heatwave</b> (air up to 40.8&nbsp;°C) at 1&nbsp;m detail.</p>
+      <details class="howto" id="howto">
+        <summary>How to read this map</summary>
+        <ol>
+          <li><b>Colours</b> show how hot it <i>feels</i> to stand there. Sun, hot paving and warm walls add to the air temperature; shade is the cool blue-green.</li>
+          <li><b>Drag the timeline</b> at the bottom, or press ▶, to watch shadows and heat move through the day.</li>
+          <li><b>Click a square</b> on the map or in the list to see its daily heat profile.</li>
+          <li>Turn on <b>3D city</b> or the <b>aerial photo</b> to see what makes a place hot or cool.</li>
+        </ol>
+      </details>
+    </header>
+
+    <section class="block">
+      <h2 class="label">Show</h2>
+      <div class="seg" id="layerSeg" role="tablist">
+        <button data-layer="utci" class="on">Feels like</button>
+        <button data-layer="tmrt">Sun &amp; surfaces</button>
+        <button data-layer="summary">5-day summary</button>
+      </div>
+      <p class="hint" id="layerHint"></p>
+      <select id="summarySel" class="select" hidden aria-label="Summary indicator">
+        <option value="utci_hours38_per_day">Hours per day of very strong heat stress</option>
+        <option value="utci_hours32_per_day">Hours per day of strong heat stress</option>
+        <option value="tmrt_max">Hottest moment (radiant heat)</option>
+        <option value="tmrt_day_mean">Average daytime radiant heat</option>
+        <option value="sun_hours_day_per_day">Hours of direct sun per day</option>
+        <option value="utci_night_mean">How warm the nights feel</option>
+      </select>
+    </section>
+
+    <section class="block">
+      <h2 class="label">Map view</h2>
+      <div class="seg seg2" id="baseSeg">
+        <button data-base="map" class="on">Map</button>
+        <button data-base="aerial">Aerial photo</button>
+      </div>
+      <label class="switch"><input type="checkbox" id="b3dTog"><span class="knob"></span><span>3D city <small>buildings &amp; trees</small></span></label>
+      <label class="switch"><input type="checkbox" id="scenTog"><span class="knob"></span><span>Undefined surfaces <small>scenario areas</small></span></label>
+      <label class="range-row"><span>Heat colours</span><input type="range" id="opac" min="20" max="100" value="80" aria-label="Heat layer opacity"></label>
+    </section>
+
+    <section class="block" id="detail" hidden></section>
+
+    <section class="block">
+      <h2 class="label">Squares, hottest first</h2>
+      <p class="hint">Hours per day (09–19 h) an average spot on the square spends in <b>very strong heat stress</b> — feeling like 38&nbsp;°C or more.</p>
+      <ol id="rank" class="rank"></ol>
+    </section>
+
+    <footer class="foot">
+      <p><b>Method.</b> SOLWEIG radiation model (UMEP) on a 1 m grid. Times are summer time (CEST).</p>
+      <p><b>Limits.</b> Air temperature and wind come from the airport station and are applied to the whole area; the city centre is usually warmer and less windy, so felt temperatures are <b>likely conservative</b>. Not yet validated with field measurements. Values describe a standing adult outdoors.</p>
+      <p><b>Scope.</b> An independent research project built only from openly available data. Some factors are not captured, for example temporary shade (awnings, umbrellas), fountains, private and courtyard trees, green roofs and façades. Read the results as an informed estimate, not as official measurements.</p>
+      <p><b>Data &amp; licences.</b>
+        Weather: Datenbasis: Deutscher Wetterdienst, eigene Bearbeitung (station 01420, provisional 2026; <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).
+        Terrain, surface model, aerial photo, buildings, squares: Geobasisdaten © Hessische Verwaltung für Bodenmanagement und Geoinformation (DGM1, DOM1, DOP20, ALKIS, ATKIS; <a href="https://www.govdata.de/dl-de/zero-2-0">dl-de/zero-2-0</a>).
+        Trees: Baumkataster © Stadt Frankfurt am Main (<a href="https://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>).
+        Basemap © <a href="https://carto.com/attribution">CARTO</a>, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.
+        Surface materials: own mapping.</p>
+      <p>Barış Parlatangiller · <a href="https://github.com/" id="repoLink">source &amp; method</a> · built with AI assistance (Claude, Anthropic)</p>
+    </footer>
+  </aside>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.12.1/proj4.js"></script>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

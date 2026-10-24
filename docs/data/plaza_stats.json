@@ -1,0 +1,539 @@
+{
+ "meta": {
+  "period": [
+   "2026-06-24",
+   "2026-06-28"
+  ],
+  "day_hours": [
+   9,
+   18
+  ],
+  "timezone": "CET (UTC+1)",
+  "frames": 120,
+  "ndays": 5
+ },
+ "plazas": [
+  {
+   "pid": "p19",
+   "name": "Rathenauplatz",
+   "area_m2": 2984,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 61.4,
+   "tmrt_peak": 73.6,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 79.0,
+   "utci_day_mean": 40.6,
+   "utci32_hours_per_day": 9.4,
+   "utci38_hours_per_day": 7.5,
+   "sun_share_day": 78.0,
+   "utci_night_mean": 24.9,
+   "tree_share": 1.0,
+   "lc_share": {
+    "0": 23.0,
+    "1": 76.0,
+    "2": 2.0
+   },
+   "rank": 1
+  },
+  {
+   "pid": "p23",
+   "name": "Willy-Brandt-Platz",
+   "area_m2": 7745,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 60.4,
+   "tmrt_peak": 70.8,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 78.4,
+   "utci_day_mean": 40.4,
+   "utci32_hours_per_day": 9.3,
+   "utci38_hours_per_day": 7.3,
+   "sun_share_day": 75.0,
+   "utci_night_mean": 25.0,
+   "tree_share": 2.0,
+   "lc_share": {
+    "0": 10.0,
+    "1": 81.0,
+    "2": 8.0
+   },
+   "rank": 2
+  },
+  {
+   "pid": "p12",
+   "name": "Kaiserplatz",
+   "area_m2": 1439,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 60.0,
+   "tmrt_peak": 70.9,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 78.0,
+   "utci_day_mean": 40.3,
+   "utci32_hours_per_day": 9.9,
+   "utci38_hours_per_day": 7.3,
+   "sun_share_day": 73.0,
+   "utci_night_mean": 25.0,
+   "tree_share": 0.0,
+   "lc_share": {
+    "0": 20.0,
+    "1": 80.0
+   },
+   "rank": 3
+  },
+  {
+   "pid": "p21",
+   "name": "Römerberg",
+   "area_m2": 5855,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 60.0,
+   "tmrt_peak": 70.0,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 79.0,
+   "utci_day_mean": 40.3,
+   "utci32_hours_per_day": 9.4,
+   "utci38_hours_per_day": 7.2,
+   "sun_share_day": 72.0,
+   "utci_night_mean": 24.9,
+   "tree_share": 0.0,
+   "lc_share": {
+    "0": 2.0,
+    "1": 87.0,
+    "2": 11.0
+   },
+   "rank": 4
+  },
+  {
+   "pid": "p20",
+   "name": "Roßmarkt",
+   "area_m2": 8921,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 59.4,
+   "tmrt_peak": 69.2,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 78.7,
+   "utci_day_mean": 40.2,
+   "utci32_hours_per_day": 9.6,
+   "utci38_hours_per_day": 7.2,
+   "sun_share_day": 73.0,
+   "utci_night_mean": 24.9,
+   "tree_share": 4.0,
+   "lc_share": {
+    "0": 35.0,
+    "1": 61.0,
+    "2": 4.0
+   },
+   "rank": 5
+  },
+  {
+   "pid": "p00",
+   "name": "An der Hauptwache",
+   "area_m2": 13245,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 58.7,
+   "tmrt_peak": 66.9,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 80.0,
+   "utci_day_mean": 40.0,
+   "utci32_hours_per_day": 9.4,
+   "utci38_hours_per_day": 7.0,
+   "sun_share_day": 69.0,
+   "utci_night_mean": 25.0,
+   "tree_share": 7.0,
+   "lc_share": {
+    "0": 10.0,
+    "1": 84.0,
+    "2": 6.0
+   },
+   "rank": 6
+  },
+  {
+   "pid": "p06",
+   "name": "Eschenheimer Tor",
+   "area_m2": 2104,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 57.6,
+   "tmrt_peak": 64.3,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 75.7,
+   "utci_day_mean": 39.7,
+   "utci32_hours_per_day": 9.3,
+   "utci38_hours_per_day": 6.9,
+   "sun_share_day": 70.0,
+   "utci_night_mean": 24.9,
+   "tree_share": 7.0,
+   "lc_share": {
+    "0": 42.0,
+    "2": 7.0,
+    "6": 51.0
+   },
+   "rank": 7
+  },
+  {
+   "pid": "p01",
+   "name": "Anni-und-Erwin-Levi-Platz",
+   "area_m2": 1929,
+   "geom_source": "ALKIS",
+   "tmrt_day_mean": 57.4,
+   "tmrt_peak": 67.7,
+   "tmrt_peak_time": "2026-06-27T13:00",
+   "tmrt_max_px": 73.3,
+   "utci_day_mean": 39.7,
+   "utci32_hours_per_day": 9.7,
+   "utci38_hours_per_day": 6.9,
+   "sun_share_day": 66.0,
+   "utci_night_mean": 25.0,
+   "tree_share": 8.0,
+   "lc_share": {
+    "0": 100.0
+   },
+   "rank": 8
+  },
+  {
+   "pid": "p14",
+   "name": "Konstablerwache",
+   "area_m2": 8534,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 56.0,
+   "tmrt_peak": 62.5,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 79.6,
+   "utci_day_mean": 39.3,
+   "utci32_hours_per_day": 9.5,
+   "utci38_hours_per_day": 6.3,
+   "sun_share_day": 62.0,
+   "utci_night_mean": 25.0,
+   "tree_share": 12.0,
+   "lc_share": {
+    "0": 8.0,
+    "1": 91.0,
+    "2": 1.0
+   },
+   "rank": 9
+  },
+  {
+   "pid": "p10",
+   "name": "Hans-Flesch-Platz",
+   "area_m2": 1936,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 55.6,
+   "tmrt_peak": 64.8,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 78.0,
+   "utci_day_mean": 39.2,
+   "utci32_hours_per_day": 9.3,
+   "utci38_hours_per_day": 6.2,
+   "sun_share_day": 59.0,
+   "utci_night_mean": 25.1,
+   "tree_share": 18.0,
+   "lc_share": {
+    "0": 46.0,
+    "1": 51.0,
+    "2": 3.0
+   },
+   "rank": 10
+  },
+  {
+   "pid": "p22",
+   "name": "Weckmarkt",
+   "area_m2": 2591,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 55.0,
+   "tmrt_peak": 64.1,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 76.6,
+   "utci_day_mean": 39.1,
+   "utci32_hours_per_day": 9.4,
+   "utci38_hours_per_day": 6.1,
+   "sun_share_day": 61.0,
+   "utci_night_mean": 25.1,
+   "tree_share": 14.0,
+   "lc_share": {
+    "0": 89.0,
+    "1": 4.0,
+    "2": 7.0
+   },
+   "rank": 11
+  },
+  {
+   "pid": "p17",
+   "name": "Opernplatz",
+   "area_m2": 23790,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 54.6,
+   "tmrt_peak": 64.7,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 78.5,
+   "utci_day_mean": 39.0,
+   "utci32_hours_per_day": 9.1,
+   "utci38_hours_per_day": 6.1,
+   "sun_share_day": 57.0,
+   "utci_night_mean": 25.1,
+   "tree_share": 13.0,
+   "lc_share": {
+    "0": 22.0,
+    "1": 59.0,
+    "2": 19.0
+   },
+   "rank": 12
+  },
+  {
+   "pid": "p18",
+   "name": "Paulsplatz",
+   "area_m2": 6281,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 54.0,
+   "tmrt_peak": 62.3,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 76.7,
+   "utci_day_mean": 38.9,
+   "utci32_hours_per_day": 9.3,
+   "utci38_hours_per_day": 6.1,
+   "sun_share_day": 57.0,
+   "utci_night_mean": 25.1,
+   "tree_share": 17.0,
+   "lc_share": {
+    "0": 14.0,
+    "1": 84.0,
+    "2": 1.0
+   },
+   "rank": 13
+  },
+  {
+   "pid": "p13",
+   "name": "Klaus-Mann-Platz",
+   "area_m2": 1515,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 54.6,
+   "tmrt_peak": 63.6,
+   "tmrt_peak_time": "2026-06-27T13:00",
+   "tmrt_max_px": 76.8,
+   "utci_day_mean": 39.0,
+   "utci32_hours_per_day": 9.5,
+   "utci38_hours_per_day": 6.0,
+   "sun_share_day": 56.0,
+   "utci_night_mean": 25.2,
+   "tree_share": 16.0,
+   "lc_share": {
+    "0": 34.0,
+    "1": 58.0,
+    "2": 8.0
+   },
+   "rank": 14
+  },
+  {
+   "pid": "p07",
+   "name": "Fischerplätzchen",
+   "area_m2": 1233,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 54.4,
+   "tmrt_peak": 62.5,
+   "tmrt_peak_time": "2026-06-27T12:00",
+   "tmrt_max_px": 73.0,
+   "utci_day_mean": 39.0,
+   "utci32_hours_per_day": 9.8,
+   "utci38_hours_per_day": 6.0,
+   "sun_share_day": 54.0,
+   "utci_night_mean": 25.0,
+   "tree_share": 30.0,
+   "lc_share": {
+    "0": 41.0,
+    "1": 59.0
+   },
+   "rank": 15
+  },
+  {
+   "pid": "p09",
+   "name": "Goetheplatz",
+   "area_m2": 5988,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 51.6,
+   "tmrt_peak": 64.5,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 78.4,
+   "utci_day_mean": 38.3,
+   "utci32_hours_per_day": 8.8,
+   "utci38_hours_per_day": 5.6,
+   "sun_share_day": 50.0,
+   "utci_night_mean": 25.1,
+   "tree_share": 11.0,
+   "lc_share": {
+    "0": 91.0,
+    "1": 3.0,
+    "2": 6.0
+   },
+   "rank": 16
+  },
+  {
+   "pid": "p05",
+   "name": "Domplatz",
+   "area_m2": 6457,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 51.7,
+   "tmrt_peak": 62.0,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 77.0,
+   "utci_day_mean": 38.3,
+   "utci32_hours_per_day": 9.1,
+   "utci38_hours_per_day": 5.5,
+   "sun_share_day": 46.0,
+   "utci_night_mean": 25.1,
+   "tree_share": 3.0,
+   "lc_share": {
+    "0": 20.0,
+    "1": 35.0,
+    "2": 46.0
+   },
+   "rank": 17
+  },
+  {
+   "pid": "p15",
+   "name": "Liebfrauenberg",
+   "area_m2": 2082,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 51.7,
+   "tmrt_peak": 62.6,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 76.7,
+   "utci_day_mean": 38.3,
+   "utci32_hours_per_day": 8.8,
+   "utci38_hours_per_day": 5.5,
+   "sun_share_day": 45.0,
+   "utci_night_mean": 25.1,
+   "tree_share": 16.0,
+   "lc_share": {
+    "0": 4.0,
+    "1": 89.0,
+    "2": 6.0
+   },
+   "rank": 18
+  },
+  {
+   "pid": "p16",
+   "name": "Markt",
+   "area_m2": 3691,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 51.8,
+   "tmrt_peak": 61.6,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 77.2,
+   "utci_day_mean": 38.3,
+   "utci32_hours_per_day": 8.8,
+   "utci38_hours_per_day": 5.4,
+   "sun_share_day": 45.0,
+   "utci_night_mean": 25.2,
+   "tree_share": 3.0,
+   "lc_share": {
+    "0": 6.0,
+    "1": 61.0,
+    "2": 34.0
+   },
+   "rank": 19
+  },
+  {
+   "pid": "p11",
+   "name": "Horst-Lippmann-Platz",
+   "area_m2": 617,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 51.5,
+   "tmrt_peak": 62.3,
+   "tmrt_peak_time": "2026-06-27T14:00",
+   "tmrt_max_px": 75.4,
+   "utci_day_mean": 38.3,
+   "utci32_hours_per_day": 8.9,
+   "utci38_hours_per_day": 5.4,
+   "sun_share_day": 46.0,
+   "utci_night_mean": 25.2,
+   "tree_share": 0.0,
+   "lc_share": {
+    "0": 27.0,
+    "1": 51.0,
+    "2": 21.0
+   },
+   "rank": 20
+  },
+  {
+   "pid": "p02",
+   "name": "Börneplatz",
+   "area_m2": 4737,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 49.1,
+   "tmrt_peak": 55.7,
+   "tmrt_peak_time": "2026-06-27T13:00",
+   "tmrt_max_px": 73.1,
+   "utci_day_mean": 37.7,
+   "utci32_hours_per_day": 9.1,
+   "utci38_hours_per_day": 5.3,
+   "sun_share_day": 53.0,
+   "utci_night_mean": 25.0,
+   "tree_share": 20.0,
+   "lc_share": {
+    "0": 18.0,
+    "2": 1.0,
+    "5": 81.0
+   },
+   "rank": 21
+  },
+  {
+   "pid": "p08",
+   "name": "Friedrich-Stoltze-Platz",
+   "area_m2": 1915,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 49.9,
+   "tmrt_peak": 58.8,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 74.0,
+   "utci_day_mean": 37.9,
+   "utci32_hours_per_day": 8.6,
+   "utci38_hours_per_day": 5.1,
+   "sun_share_day": 43.0,
+   "utci_night_mean": 25.1,
+   "tree_share": 44.0,
+   "lc_share": {
+    "0": 34.0,
+    "1": 66.0
+   },
+   "rank": 22
+  },
+  {
+   "pid": "p03",
+   "name": "Börsenplatz",
+   "area_m2": 3972,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 48.8,
+   "tmrt_peak": 54.3,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 76.8,
+   "utci_day_mean": 37.7,
+   "utci32_hours_per_day": 9.1,
+   "utci38_hours_per_day": 4.6,
+   "sun_share_day": 36.0,
+   "utci_night_mean": 25.2,
+   "tree_share": 25.0,
+   "lc_share": {
+    "0": 6.0,
+    "1": 92.0,
+    "2": 2.0
+   },
+   "rank": 23
+  },
+  {
+   "pid": "p04",
+   "name": "Carl-Theodor-Reiffenstein-Platz",
+   "area_m2": 770,
+   "geom_source": "tampon-geri",
+   "tmrt_day_mean": 45.5,
+   "tmrt_peak": 58.0,
+   "tmrt_peak_time": "2026-06-27T15:00",
+   "tmrt_max_px": 73.2,
+   "utci_day_mean": 36.9,
+   "utci32_hours_per_day": 8.4,
+   "utci38_hours_per_day": 4.0,
+   "sun_share_day": 24.0,
+   "utci_night_mean": 25.2,
+   "tree_share": 56.0,
+   "lc_share": {
+    "0": 5.0,
+    "1": 95.0
+   },
+   "rank": 24
+  }
+ ]
+}
